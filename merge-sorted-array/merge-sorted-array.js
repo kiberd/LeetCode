@@ -7,15 +7,14 @@
  */
 var merge = function(nums1, m, nums2, n) {
     
-    const length = nums1.length;
-    for (let i = 0; i < length - m; i++){
+    const nums1Length = nums1.length;
+    for (let i = 0; i < nums1Length - m; i++){
         nums1.pop()
     };
     
-    const secondArry = nums2.slice(0, n);
-    secondArry.map((item) => {
-        nums1.push(item);
-    });
+    for (let i = 0; i < n; i++){
+        nums1.push(nums2[i]);
+    };
     
     nums1.sort((a,b) => {
         return (a-b)
